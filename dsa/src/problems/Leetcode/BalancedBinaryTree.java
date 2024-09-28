@@ -4,7 +4,7 @@ public class BalancedBinaryTree {
 
     public static class TreeNode {
         int value;
-        BTS.TreeNode left, right;
+        TreeNode left, right;
 
         //constructor
         TreeNode(int value) {
@@ -15,7 +15,7 @@ public class BalancedBinaryTree {
 
     }
 
-    public static BTS.TreeNode buildBTS(int[] array, int start, int end) {
+    public static TreeNode buildBTS(int[] array, int start, int end) {
 
 
         //Base case
@@ -24,7 +24,7 @@ public class BalancedBinaryTree {
         }
 
         int mid = (start + end) / 2;
-        BTS.TreeNode root = new BTS.TreeNode(array[mid]);
+        TreeNode root = new TreeNode(array[mid]);
         root.left = buildBTS(array, start, mid - 1);
         root.right = buildBTS(array, mid + 1, end);
 
@@ -32,7 +32,7 @@ public class BalancedBinaryTree {
 
     }
 
-    public static void preOrderTraverse(BTS.TreeNode node) {
+    public static void preOrderTraverse(TreeNode node) {
 
 
         //Base case

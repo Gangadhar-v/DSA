@@ -31,7 +31,7 @@ public class MatchCounting {
         String[] b = {"computer", "silver" ,"lenovo"};
         String[] c = {"phone", "gold"," iphone"};
         List<String[]> items = List.of(a,b,c );
-        System.out.println(MatchingCount.countMatching(3,items,"color","silver"));
+        System.out.println(countMatching(3,items,"color","silver"));
     }
 
 }
