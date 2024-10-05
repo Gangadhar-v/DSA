@@ -1,4 +1,4 @@
-package problems.Arrays.Easy.Medium;
+package problems.Arrays.Medium;
 
 public class BetweenArrays {
 

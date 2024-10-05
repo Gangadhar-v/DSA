@@ -6,8 +6,8 @@ import java.util.Arrays;
 /*
 PROBLEM STATEMENT
 
-major diagonal -> 0,4,8
-minor diagonal -> 2,4,6
+major diagonal -> 0,4,8  index i,i
+minor diagonal -> 2,4,6  index i,N-i-1
 Input : 0 1 2
         3 4 5
         6 7 8

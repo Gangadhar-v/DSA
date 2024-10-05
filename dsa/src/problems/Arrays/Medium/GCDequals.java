@@ -1,4 +1,4 @@
-package problems.Arrays.Easy.Medium;
+package problems.Arrays.Medium;
 
 
 //return the number of subArrays count that have the gcd of k
