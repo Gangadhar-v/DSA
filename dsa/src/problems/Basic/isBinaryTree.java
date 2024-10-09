@@ -9,7 +9,7 @@ package problems.Basic;
 
 
  */
-public class isBanaryTree {
+public class isBinaryTree {
     public static class TreeNode{
 
         int value;
