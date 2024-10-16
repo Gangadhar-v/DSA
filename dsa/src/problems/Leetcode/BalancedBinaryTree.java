@@ -1,5 +1,7 @@
 package problems.Leetcode;
 
+import java.util.Arrays;
+
 public class BalancedBinaryTree {
 
     public static class TreeNode {
@@ -48,5 +50,12 @@ public class BalancedBinaryTree {
         preOrderTraverse(node.left);
         preOrderTraverse(node.right);
 
+    }
+
+    public static void main(String[] args) {
+
+        int[] array = {1,7,8,9,10,-1,2};
+        Arrays.sort(array);
+       preOrderTraverse(buildBTS(array,0,array.length-1));
     }
 }
