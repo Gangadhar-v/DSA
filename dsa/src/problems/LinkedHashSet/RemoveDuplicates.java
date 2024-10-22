@@ -1,4 +1,4 @@
-package problems.LinkedSet;
+package problems.LinkedHashSet;
 
 import java.util.LinkedHashSet;
 /*
