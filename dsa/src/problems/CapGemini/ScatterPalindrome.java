@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+/*
+PROBLEM STATEMENT
+if a string consists of
+ */
 public class ScatterPalindrome {
 
     public static List<Integer> approach1(List<String> strToWord){

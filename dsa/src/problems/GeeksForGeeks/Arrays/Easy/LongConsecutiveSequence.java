@@ -15,7 +15,7 @@ Output: 4 (the sequence: [1, 2, 3, 4])
  */
 public class LongConsecutiveSequence {
 
-    public static int longestConsecutiveSequence(int[] arr) {
+    public static int approach1(int[] arr) {
 
 
        List<List<Integer>> sequences = new ArrayList<>();
@@ -52,10 +52,30 @@ public class LongConsecutiveSequence {
 return maxSize;
 
     }
+    //OPTIMIZED ONE
+    public static int approach2(int[] arr){
+
+        Arrays.sort(arr);
+        int first = 0;
+        int maxCount = Integer.MIN_VALUE;
+        int count = 1;
+        for(int i = 1;i<arr.length;i++){
+
+            if(arr[i]-arr[first] == 1){
+                count++;
+            }else{
+                maxCount = Integer.max(maxCount,count);
+                count = 1;
+
+            }
+            first = i;
+        }
+        return maxCount;
+    }
 
     public static void main(String agrs[]){
 
         int[] arr= { 100,4,200,1,3,2};
-        System.out.println(longestConsecutiveSequence(arr));
+        System.out.println(approach2(arr));
     }
 }
