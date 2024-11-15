@@ -9,7 +9,7 @@ Return prime numbers that are less than givenNumber
  */
 public class BestPrime {
 
-    public static int bestPrime(int number){
+    public static ArrayList<Integer> bestPrime(int number){
         int currentNumber = 2;
         ArrayList<Integer> result = new ArrayList<>();
         while(currentNumber<number){
@@ -18,7 +18,7 @@ public class BestPrime {
             }
             currentNumber++;
         }
-        return result.size();
+        return result;
     }
 
     public static boolean isPrime(int n){

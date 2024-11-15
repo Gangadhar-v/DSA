@@ -1,24 +1,44 @@
 package problems.Basic;
+/*
+Key Insight for Factorials
+When calculating
+𝑛
+!
+n!, there are usually more factors of 2 than 5, so the number of trailing zeros is determined by the number of times 5 is a factor in the sequence of numbers from 1 to
+𝑛
+n.
 
+Steps to Calculate Trailing Zeros
+Count how many times 5 appears as a factor in the numbers from 1 to
+𝑛
+n.
+Additionally, consider multiples of higher powers of 5 (like
+25
+,
+125
+,
+625
+,
+…
+25,125,625,…) because they contribute additional factors of 5.
+ */
 public class TrailingZeros {
 
-    public static int factorial(int i){
-        if(i==0) return 1;
-        if(i==1) return 1;
-        else {
-            return i*factorial(i-1);
-        }
-    }
 
-    public static int trailingZero(int i){
+
+    public static int trailingZeros(int num){
+
         int count = 0;
-        int result = factorial(i);
-       while(result!=0){
-           int digit = result%10;
-           if(digit == 0) count++;
-           result=result/10;
-       }
-       return count;
+        for(int i = 5;i<=num;i=i*5){
+
+            for(int j = 1;j<=num;j++){
+
+                if(j%i == 0){
+                    count++;
+                }
+            }
+        }
+        return count;
     }
 
     /* More efficient way */
@@ -39,7 +59,7 @@ termination condition = quotient>=1
         return count;
     }
     public static void main(String args[]){
-        System.out.println(trailingZeros2(100));
+        System.out.println(trailingZeros(100));
 
     }
 }
